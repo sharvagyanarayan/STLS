@@ -1,0 +1,496 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark: #03051b;
+  --navy: #11105e;
+  --purple: #4d43c9;
+  --lavender: #786ddd;
+  --light: #cfe4ff;
+  --white: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: var(--white);
+  background: var(--dark);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 595px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 67% 10%, rgba(73, 64, 220, .28), transparent 18%),
+    radial-gradient(circle at 15% 48%, rgba(32, 65, 255, .2), transparent 25%),
+    #02051c;
+}
+
+.navbar {
+  position: relative;
+  z-index: 10;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 4.2%;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: white;
+  display: grid;
+  place-items: center;
+  color: #00bcd4;
+  box-shadow: 0 0 18px rgba(255,255,255,.15);
+}
+
+.logo-mark {
+  font-size: 28px;
+  font-weight: 900;
+  transform: rotate(-25deg);
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(32px, 7vw, 100px);
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: .3px;
+}
+
+.nav-links a:hover {
+  color: #a59bff;
+}
+
+.menu-btn {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 25px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  min-height: 510px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2%;
+}
+
+.hero-title {
+  font-size: clamp(62px, 10.4vw, 145px);
+  line-height: .92;
+  font-weight: 900;
+  letter-spacing: -6px;
+  text-align: left;
+  margin-top: -5px;
+}
+
+.hero-title span,
+.hero-title strong {
+  display: block;
+}
+
+.hero-title strong {
+  color: #7b70df;
+  -webkit-text-stroke: 1px #948cff;
+  margin-left: 10%;
+}
+
+.tag {
+  position: absolute;
+  right: 2.5%;
+  bottom: 165px;
+  color: #f1e900;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.hero-btn {
+  align-self: center;
+  margin-top: 70px;
+  width: 200px;
+  padding: 14px 20px;
+  border: 3px solid white;
+  border-radius: 35px;
+  text-align: center;
+  font-weight: 800;
+  text-decoration: underline;
+  transition: .25s ease;
+}
+
+.hero-btn:hover {
+  background: white;
+  color: var(--dark);
+}
+
+/* Decorative 3D-like shapes */
+.orb {
+  position: absolute;
+  z-index: 1;
+  border-radius: 42%;
+  filter: blur(.2px);
+  box-shadow:
+    inset 18px -18px 28px rgba(0,0,0,.45),
+    inset -14px 14px 22px rgba(95, 153, 255, .45),
+    0 0 30px rgba(30, 55, 255, .18);
+  background: radial-gradient(circle at 30% 25%, #2446ff, #0d0c58 65%, #02031d);
+}
+
+.orb-1 { width: 210px; height: 210px; left: -70px; top: 170px; transform: rotate(25deg); }
+.orb-2 { width: 165px; height: 165px; left: 59%; top: 15px; border-radius: 50%; }
+.orb-3 { width: 150px; height: 260px; right: 7%; top: 110px; transform: rotate(48deg); }
+.orb-4 { width: 250px; height: 125px; left: -20px; bottom: -25px; transform: rotate(-26deg); background: radial-gradient(circle at 65% 25%, #745eff, #15106b 70%); }
+.orb-5 { width: 185px; height: 185px; right: -5px; bottom: 65px; border-radius: 50%; }
+.orb-6 {
+  width: 145px;
+  height: 145px;
+  left: 35%;
+  bottom: 125px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 45% 30%, #0a65dc, #05175b 58%, #02051d);
+  box-shadow: inset 0 0 25px #0785ff, 0 0 20px rgba(0,90,255,.3);
+}
+
+/* How it works */
+.how {
+  background: var(--light);
+  color: #0e0b65;
+  min-height: 595px;
+  padding: 36px 5% 85px;
+}
+
+.how h2 {
+  text-align: center;
+  font-size: clamp(42px, 6vw, 70px);
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+.steps {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.step-card {
+  text-align: center;
+}
+
+.card-text {
+  height: 280px;
+  border-radius: 54px;
+  padding: 67px 20px;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  line-height: 1.45;
+  font-weight: 800;
+}
+
+.step-card h3 {
+  color: #050505;
+  font-size: 15px;
+  margin-top: 13px;
+}
+
+.purple .card-text {
+  background: #4e43c9;
+  color: white;
+}
+
+.navy .card-text {
+  background: #151065;
+  color: white;
+}
+
+.white .card-text {
+  background: white;
+  color: #050505;
+}
+
+/* Footer */
+footer {
+  min-height: 235px;
+  position: relative;
+  overflow: hidden;
+  background: #0b0750;
+  padding: 42px 4.5%;
+  display: flex;
+  align-items: flex-start;
+  gap: 90px;
+}
+
+.footer-brand {
+  position: relative;
+  z-index: 3;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.footer-logo b {
+  font-size: 14px;
+}
+
+.footer-logo b span {
+  color: #756bdc;
+}
+
+.small {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: white;
+  border-radius: 50%;
+  color: #00aacc;
+  font-size: 22px;
+}
+
+.footer-brand h2 {
+  font-size: 23px;
+  margin-bottom: 7px;
+}
+
+.footer-brand p {
+  font-size: 10px;
+  line-height: 1.45;
+  color: #b9b8d5;
+}
+
+.socials {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  gap: 12px;
+  align-self: center;
+  margin-top: 45px;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid #4d57b5;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.socials a:hover {
+  background: #4d43c9;
+}
+
+.footer-shapes {
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 38%;
+  height: 100%;
+}
+
+.f-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #3159ff, #080a4c 70%);
+  box-shadow: inset -15px -15px 20px rgba(0,0,0,.4);
+}
+
+.f1 { width: 70px; height: 70px; right: 8%; top: 20px; }
+.f2 { width: 58px; height: 58px; right: 0; top: 115px; }
+.f3 { width: 55px; height: 55px; right: 25%; bottom: 5px; }
+.f4 { width: 105px; height: 48px; right: 27%; top: 75px; transform: rotate(-38deg); border-radius: 50px; }
+.f5 { width: 55px; height: 55px; right: 48%; bottom: 20px; }
+
+/* Sign-in modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: none;
+  place-items: center;
+  z-index: 50;
+  padding: 20px;
+}
+
+.modal.open {
+  display: grid;
+}
+
+.modal-box {
+  width: min(420px, 100%);
+  background: white;
+  color: #11105e;
+  border-radius: 24px;
+  padding: 34px;
+  position: relative;
+  box-shadow: 0 20px 80px rgba(0,0,0,.5);
+}
+
+.modal-box h2 {
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.modal-box p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.modal-box input {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font: inherit;
+}
+
+.submit {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 14px;
+  background: #4d43c9;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 17px;
+  border: 0;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+  .hero {
+    min-height: 570px;
+  }
+
+  .nav-links {
+    gap: 25px;
+    font-size: 13px;
+  }
+
+  .hero-title {
+    font-size: clamp(48px, 12vw, 95px);
+    letter-spacing: -3px;
+  }
+
+  .hero-title strong {
+    margin-left: 4%;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .how {
+    padding-bottom: 60px;
+  }
+
+  footer {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .footer-shapes {
+    opacity: .6;
+    width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .hero-content {
+    justify-content: center;
+    padding: 0 18px;
+  }
+
+  .hero-title {
+    font-size: 58px;
+    letter-spacing: -3px;
+  }
+
+  .hero-title strong {
+    margin-left: 0;
+  }
+
+  .tag {
+    right: 18px;
+    bottom: 160px;
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    margin-top: 55px;
+  }
+
+  .orb-2 { left: 55%; }
+  .orb-3 { right: -35px; }
+  .orb-6 { left: 32%; }
+
+  .how h2 {
+    font-size: 43px;
+  }
+
+  .card-text {
+    height: 245px;
+    font-size: 21px;
+    border-radius: 40px;
+  }
+
+  footer {
+    min-height: 320px;
+  }
+
+  .socials {
+    margin-top: 0;
+  }
+}
